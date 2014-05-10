@@ -36,8 +36,8 @@ border:1px solid black;
 <br><br><br>
 
 <div style="float:left; width:33%"> <center> <div style="background-color:#0041C2;height:100px;width:200px;display: table-cell;vertical-align: middle;"> <center> <h1> 10:00  </h1> </center> </div> </center> </div>
-<div style="float:left;width:33%"> <center> <div style="background-color:#1569C7;height:100px;width:200px;display: table-cell;vertical-align: middle"> <center> <h1> 00:20 </h1> </center> </div> </center> </div>
-<div style="float:left;width:33%"> <center> <div style="background-color:#659EC7;height:100px;width:200px;display: table-cell;vertical-align: middle"> <center> <h1> 00:05 </h1> </center> </div> </center></div>
+<div style="float:left;width:33%"> <center> <div id="bigtime2"  onclick="timer2()" style="background-color:#1569C7;height:100px;width:200px;display: table-cell;vertical-align: middle"> <center> <h1 id="timer2"> 00:20 </h1> </center> </div> </center> </div>
+<div  style="float:left;width:33%"> <center> <div id="bigtime1" onclick="timer1()" style="background-color:#659EC7;height:100px;width:200px;display: table-cell;vertical-align: middle"> <center> <h1 id="timer1"> 00:05 </h1> </center> </div> </center></div>
 
 <br><br><br><br>
 
@@ -330,6 +330,41 @@ else{
 id.innerHTML="<center> 10 </center>";
 scoreB = scoreB + 10;}
 refresh();
+}
+
+function timer1() {
+    var x = document.getElementById("timer1");
+    x.innerHTML = "00:05";
+    var t1 = setTimeout(function(){x.innerHTML = "00:04"},1000);
+    var t2 = setTimeout(function(){x.innerHTML = "00:03"},2000);
+    var t3 = setTimeout(function(){x.innerHTML = "00:02"},3000);
+    var t4 = setTimeout(function(){x.innerHTML = "00:01"},4000);
+    var t5 = setTimeout(function(){x.innerHTML = "00:00"; document.getElementById("bigtime1").style.backgroundColor='red';},5000);
+}
+
+function timer2() {
+    var x = document.getElementById("timer2");
+    x.innerHTML = "00:20";
+   var t1 = setTimeout(function(){x.innerHTML = "00:19"},1000);
+    var t2 = setTimeout(function(){x.innerHTML = "00:18"},2000);
+    var t3 = setTimeout(function(){x.innerHTML = "00:17"},3000);
+    var t4 = setTimeout(function(){x.innerHTML = "00:16"},4000);
+    var t5 = setTimeout(function(){x.innerHTML = "00:15"},5000);
+    var t1 = setTimeout(function(){x.innerHTML = "00:14"},6000);
+    var t2 = setTimeout(function(){x.innerHTML = "00:13"},7000);
+    var t3 = setTimeout(function(){x.innerHTML = "00:12"},8000);
+    var t4 = setTimeout(function(){x.innerHTML = "00:11"},9000);
+    var t5 = setTimeout(function(){x.innerHTML = "00:10"},10000);
+    var t1 = setTimeout(function(){x.innerHTML = "00:09"},11000);
+    var t2 = setTimeout(function(){x.innerHTML = "00:08"},12000);
+    var t3 = setTimeout(function(){x.innerHTML = "00:07"},13000);
+    var t4 = setTimeout(function(){x.innerHTML = "00:06"},14000);
+    var t5 = setTimeout(function(){x.innerHTML = "00:05"; document.getElementById("bigtime2").style.backgroundColor='red';},15000);
+    var t1 = setTimeout(function(){x.innerHTML = "00:04"},16000);
+    var t2 = setTimeout(function(){x.innerHTML = "00:03"},17000);
+    var t3 = setTimeout(function(){x.innerHTML = "00:02"},18000);
+    var t4 = setTimeout(function(){x.innerHTML = "00:01"},19000);
+    var t5 = setTimeout(function(){x.innerHTML = "00:00"},20000);
 }
 
 </script>
